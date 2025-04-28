@@ -42,6 +42,11 @@ jobs:
     - name: Install Pulumi CLI
       uses: pulumi/actions@v4
 
+    - name: Install Pulumi SDK
+      run: |
+        cd go-api-pulumi-ts
+        npm install
+
     - name: Set up Pulumi stack
       run: |
         cd go-api-pulumi-ts
