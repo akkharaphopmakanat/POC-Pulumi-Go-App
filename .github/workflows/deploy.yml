@@ -42,9 +42,6 @@ jobs:
     - name: Install Pulumi CLI
       uses: pulumi/actions@v4
 
-    - name: Install NPM dependencies
-      run: npm install
-
     - name: Set up Pulumi stack
       run: |
         pulumi stack select dev || pulumi stack init dev
