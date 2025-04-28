@@ -44,6 +44,7 @@ jobs:
 
     - name: Set up Pulumi stack
       run: |
+        cd go-api-pulumi-ts
         pulumi stack select akkharaphopmakanat/go-api-pulumi-ts/dev || pulumi stack init akkharaphopmakanat/go-api-pulumi-ts/dev
 
     - name: Pulumi up
