@@ -48,4 +48,6 @@ jobs:
         pulumi stack select akkharaphopmakanat/go-api-pulumi-ts/dev || pulumi stack init akkharaphopmakanat/go-api-pulumi-ts/dev
 
     - name: Pulumi up
-      run: pulumi up --yes
+      run: |
+        cd go-api-pulumi-ts
+        pulumi up --yes
