@@ -44,15 +44,15 @@ jobs:
 
     - name: Install Pulumi SDK
       run: |
-        cd go-api-pulumi-ts
+        cd pulumi
         npm install
 
     - name: Set up Pulumi stack
       run: |
-        cd go-api-pulumi-ts
-        pulumi stack select akkharaphopmakanat/go-api-pulumi-ts/dev || pulumi stack init akkharaphopmakanat/go-api-pulumi-ts/dev
+        cd pulumi
+        pulumi stack select akkharaphopmakanat/pulumi/dev || pulumi stack init akkharaphopmakanat/pulumi/dev
 
     - name: Pulumi up
       run: |
-        cd go-api-pulumi-ts
+        cd pulumi
         pulumi up --yes
